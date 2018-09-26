@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    js:
+        image: node:alpine
+        network_mode: "host"
+        volumes:
+            - ../../:/code
+        working_dir: /code/vue
+        command: sh -c "yarn && yarn start"

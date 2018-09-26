@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    middle:
+        image: node:alpine
+        network_mode: "host"
+        volumes:
+            - ../../:/code
+        environment:
+            - NODE_ENV=production
+        working_dir: /code/express
+        command: sh -c "yarn && yarn start"
