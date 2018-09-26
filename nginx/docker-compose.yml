@@ -5,6 +5,5 @@ services:
         image: nginx:1.14-alpine
         network_mode: "host"
         volumes:
-            - ../../nginx/nginx.conf:/etc/nginx/nginx.conf
-        environment:
-            - NGINX_PORT=1234
+            - ../:/code
+            - ../nginx:/etc/nginx
